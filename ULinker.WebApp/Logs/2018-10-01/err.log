@@ -1,0 +1,4 @@
+2018-10-01 22:36:07,213 [7] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.Create.Fatal error encountered during command execution.
+System.Exception: error
+2018-10-01 22:36:10,318 [7] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.Create.Fatal error encountered during command execution.
+System.Exception: error

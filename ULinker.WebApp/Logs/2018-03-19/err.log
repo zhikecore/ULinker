@@ -1,0 +1,6 @@
+2018-03-19 19:50:43,163 [7] ERROR ULinker.DAL.UserPlatformDao - PlatformDao.IsExist.Unknown column 'AppId' in 'where clause'
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'AppId' in 'where clause'
+   在 ULinker.Common.DB.DBHelper.GetDataRow(String cmdText, MySqlParameter[] commandParameters) 位置 E:\Projects\MaintenResponsitory\ULinker\ULinker.Common.DB\DBHelper.cs:行号 33
+   在 ULinker.DAL.UserPlatformDao.IsExist(Int32 platformId, Int32 appId) 位置 E:\Projects\MaintenResponsitory\ULinker\ULinker.DAL\UserPlatformDao.cs:行号 54
+2018-03-19 19:50:43,377 [7] ERROR ULinker.DAL.UserPlatformDao - UserPlatformDao.Create.Unknown column 'CreatorId' in 'field list'
+System.Exception: error

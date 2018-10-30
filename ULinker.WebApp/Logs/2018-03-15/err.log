@@ -1,0 +1,6 @@
+2018-03-15 23:30:09,828 [13] ERROR ULinker.DAL.UserPlatformDao - PlatformDao._Filter.该字符串未被识别为有效的布尔值。
+System.Exception: error
+2018-03-15 23:30:14,367 [13] ERROR ULinker.DAL.UserPlatformDao - PlatformDao._Filter.该字符串未被识别为有效的布尔值。
+System.Exception: error
+2018-03-15 23:33:11,399 [7] ERROR ULinker.DAL.UserPlatformDao - PlatformDao._Filter.该字符串未被识别为有效的布尔值。
+System.Exception: error

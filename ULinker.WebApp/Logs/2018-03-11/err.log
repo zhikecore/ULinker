@@ -1,0 +1,28 @@
+2018-03-11 10:25:04,293 [8] ERROR ULinker.DAL.PlatformDao - PlatformDao.Create.Incorrect string value: '\xE5\xAE\x98\xE7\xBD\x91...' for column 'Description' at row 1
+System.Exception: error
+2018-03-11 10:32:20,134 [11] ERROR ULinker.DAL.PlatformDao - PlatformDao.Create.Incorrect string value: '\xE5\xAE\x98\xE7\xBD\x91...' for column 'Name' at row 1
+System.Exception: error
+2018-03-11 11:03:22,063 [15] ERROR ULinker.DAL.PlatformDao - PlatformDao.Update.Data too long for column 'Description' at row 1
+System.Exception: error
+2018-03-11 11:03:28,744 [13] ERROR ULinker.DAL.PlatformDao - PlatformDao.Update.Data too long for column 'Description' at row 1
+System.Exception: error
+2018-03-11 11:03:56,492 [13] ERROR ULinker.DAL.PlatformDao - PlatformDao.Update.Incorrect string value: '\xE5\xAE\x98\xE7\xBD\x91...' for column 'Description' at row 1
+System.Exception: error
+2018-03-11 11:21:42,355 [11] ERROR ULinker.DAL.PlatformDao - PlatformDao._Filter.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%¹ÙÍø% ORDER BY CreateTime DESC LIMIT 0,20' at line 1
+System.Exception: error
+2018-03-11 11:21:43,517 [14] ERROR ULinker.DAL.PlatformDao - PlatformDao._Filter.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%¹ÙÍø% ORDER BY CreateTime DESC LIMIT 0,20' at line 1
+System.Exception: error
+2018-03-11 11:21:43,693 [16] ERROR ULinker.DAL.PlatformDao - PlatformDao._Filter.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%¹ÙÍø% ORDER BY CreateTime DESC LIMIT 0,20' at line 1
+System.Exception: error
+2018-03-11 16:47:32,609 [8] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error
+2018-03-11 16:48:21,320 [24] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error
+2018-03-11 16:48:23,717 [8] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error
+2018-03-11 16:49:18,106 [25] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error
+2018-03-11 16:50:15,583 [24] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error
+2018-03-11 16:50:26,958 [33] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.GetAll.Table 'ulinker.role' doesn't exist
+System.Exception: error

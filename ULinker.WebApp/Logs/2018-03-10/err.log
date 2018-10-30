@@ -1,0 +1,2 @@
+2018-03-10 22:57:46,616 [1] ERROR ULinker.DAL.AdminUserDao - AdminUserDao.Create.Incorrect integer value: 'True' for column 'IsUse' at row 1
+System.Exception: error

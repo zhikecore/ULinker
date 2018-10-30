@@ -1,0 +1,157 @@
+﻿@{
+    ViewBag.Title = "ULinker";
+    ViewBag.RoleManage = "active";
+    ViewBag.UserMenu = "active open";
+}
+
+<script src="~/scripts/Platform/index.js"></script>
+@*<script src="~/Assets/widgets/recx/recx.js"></script>*@
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    jQuery(function ($) {
+        var oTable1 =
+        $('#platform_datatable')
+        //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+        .dataTable({
+            bAutoWidth: false,
+            "aoColumns": [
+              { "bSortable": false },
+              null, null, null, null, null,
+              { "bSortable": false }
+            ],
+            "aaSorting": [],
+
+            //,
+            //"sScrollY": "200px",
+            //"bPaginate": false,
+
+            //"sScrollX": "100%",
+            //"sScrollXInner": "120%",
+            //"bScrollCollapse": true,
+            //Note: if you are applying horizontal scrolling (sScrollX) on a ".table-bordered"
+            //you may want to wrap the table inside a "div.dataTables_borderWrap" element
+
+            //"iDisplayLength": 50
+        });
+
+
+        $(document).on('click', 'th input:checkbox', function () {
+            var that = this;
+            $(this).closest('table').find('tr > td:first-child input:checkbox')
+            .each(function () {
+                this.checked = that.checked;
+                $(this).closest('tr').toggleClass('selected');
+            });
+        });
+
+
+        $('[data-rel="tooltip"]').tooltip({ placement: tooltip_placement });
+
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('table')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            //var w2 = $source.width();
+
+            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+            return 'left';
+        }
+
+        var oTable = $("#platform_datatable").dataTable({
+            aoColumns: [
+        { mData: 'Name', sTitle: "名称", sWidth: '8%' },
+        { mData: 'CreateTime', sTitle: "创建日期", sWidth: 145 },
+        { mData: 'ModifyTime', sTitle: "修改日期", sWidth: 145 },
+        { mData: "Actions", sTitle: "操作", bSortable: false, sWidth: "10%" },
+            ],
+            //向服务器传递自定义参数
+            fnServerData: function (sUrl, aoData, fnCallback, oSettings) {
+                aoData.push(
+                        { "name": "Keyword", "value": $("#Keyword").val() }
+                        );
+                return oSettings.jqXHR = $.ajax({
+                    url: '/Platform/GetDataTableRecords',
+                    data: aoData,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: fnCallback,
+                    cache: true
+                });
+            },
+            bStateSave: true,
+            iDisplayLength: 10
+        });
+
+        //查询
+        $('#btnSearch').click(function () {
+            oTable.fnFilter();
+        })
+
+    })
+</script>
+
+<!-- #section:basics/content.breadcrumbs -->
+<div class="breadcrumbs" id="breadcrumbs">
+    <script type="text/javascript">
+        try { ace.settings.check('breadcrumbs', 'fixed') } catch (e) { }
+    </script>
+
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">ULinker</a>
+        </li>
+
+        <li>
+            <a href="#">数据展示台</a>
+        </li>
+        <li class="active">首页</li>
+    </ul><!-- /.breadcrumb -->
+    <!-- #section:basics/content.searchbox -->
+    <div class="nav-search" id="nav-search">
+        <form class="form-search">
+            <span class="input-icon">
+                <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                <i class="ace-icon fa fa-search nav-search-icon"></i>
+            </span>
+        </form>
+    </div><!-- /.nav-search -->
+    <!-- /section:basics/content.searchbox -->
+</div>
+
+<!-- /section:basics/content.breadcrumbs -->
+<div class="page-content">
+    <!-- #section:settings.box -->
+    @Html.Partial("~/Views/Shared/_Theme.cshtml")
+    <!-- /.ace-settings-container -->
+    <!-- /section:settings.box -->
+    <div class="page-content-area">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <!-- PAGE CONTENT BEGINS -->
+                <div class="alert alert-block alert-success">
+                    <button type="button" class="close" data-dismiss="alert">
+                        <i class="ace-icon fa fa-times"></i>
+                    </button>
+
+                    <i class="ace-icon fa fa-check green"></i>
+
+                    Welcome to
+                    <strong class="green">
+                        uLinker 
+                        <small>(v1.0)</small>
+                    </strong>,
+                    DevOps make life better.
+                </div>
+                <div class="hr hr32 hr-dotted"></div>
+                <div class="hr hr32 hr-dotted"></div>
+                <!-- PAGE CONTENT ENDS -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.page-content -->
+</div>

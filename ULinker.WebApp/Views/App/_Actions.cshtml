@@ -1,0 +1,21 @@
+﻿@model ULinker.Models.DO.App
+
+@{   
+    /*var actionDetial = "#";
+    var actionEdit = "#";
+    var actionDelete = "#";*/
+}
+
+<div class="hidden-sm hidden-xs action-buttons text-center">
+    <a class="blue" data-original-title="详细" data-placement="bottom" data-rel="tooltip">
+        <i class="ace-icon fa fa-search-plus bigger-130"></i>
+    </a>
+
+    <a class="green" data-original-title="修改" data-placement="bottom" data-rel="tooltip" onclick="ShowModal(@Model.Id,@Model.AppTypeId,@Model.ManagerId,'@Model.Name','@Model.Description.Replace("\r",String.Empty).Replace("\n",String.Empty)')">
+        <i class="ace-icon fa fa-pencil bigger-130"></i>
+    </a>
+
+    <a class="red" data-method="delete" data-original-title="删除" data-placement="bottom" data-rel="tooltip" onclick="PhysicDelete(@Model.Id);">
+        <i class="ace-icon fa fa-trash-o bigger-130"></i>
+    </a>
+</div>
