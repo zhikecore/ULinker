@@ -63,7 +63,3 @@ Low level client基本使用</b></summary>
     <img src="http://pepper.img.zhikestreet.com/es_table.png">
 </center>
 
-<center>
-    <img src="http://pepper.img.zhikestreet.com/es_update.png">
-</center>
-
